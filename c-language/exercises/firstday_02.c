@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    //写一个猜数游戏来练习循环
+    int guess = 0;
+    int num = rand();
+    int a = 0;
+
+    printf("请输入一个数：");
+    scanf("%d", &guess);
+
+    do
+    {
+        if(guess > num){
+            
+            printf("猜大了，请重新输入一个数：");
+            a ++;
+            scanf("%d", &guess);
+        }
+        else if(guess < num){
+            printf("猜小了，请重新输入一个数：");
+            a ++;
+            scanf("%d", &guess);
+        }
+        else{
+            printf("恭喜你，猜对了！\n");
+        }
+      
+    } while (num != guess);
+
+    printf("您猜了%d次就猜中了!", a);
+    
+
+
+}
