@@ -6,7 +6,7 @@ int main(){
     srand(time(0)); // 用当前时间作为随机数种子
     int guess = 0;
     int num = rand()%100 + 1; // 生成1到100之间的随机数
-    int a = 0;
+    int attempts  = 0;
 
     printf("请输入一个数：");
     scanf("%d", &guess);
@@ -16,12 +16,12 @@ int main(){
         if(guess > num){
             
             printf("猜大了，请重新输入一个数：");
-            a ++;
+            attempts ++;
             scanf("%d", &guess);
         }
         else if(guess < num){
             printf("猜小了，请重新输入一个数：");
-            a ++;
+            attempts ++;
             scanf("%d", &guess);
         }
         else{
@@ -30,8 +30,6 @@ int main(){
       
     } while (num != guess);
 
-    printf("您猜了%d次就猜中了!", a);
-    
-
-
+    printf("您猜了%d次就猜中了!", attempts + 1);
+    return 0;
 }
