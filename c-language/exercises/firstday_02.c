@@ -5,7 +5,7 @@ int main(){
     //写一个猜数游戏来练习循环
     srand(time(0)); // 用当前时间作为随机数种子
     int guess = 0;
-    int num = rand();
+    int num = rand()%100 + 1; // 生成1到100之间的随机数
     int a = 0;
 
     printf("请输入一个数：");
