@@ -1,7 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
 int main(){
     //写一个猜数游戏来练习循环
+    srand(time(0)); // 用当前时间作为随机数种子
     int guess = 0;
     int num = rand();
     int a = 0;
